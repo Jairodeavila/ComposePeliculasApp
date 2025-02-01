@@ -2,11 +2,14 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id ("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
+
 }
 
 android {
     namespace = "com.example.composepeliculasapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.composepeliculasapp"
@@ -41,11 +44,21 @@ android {
 
 dependencies {
 
-    // Retrofit
-    implementation (libs.retrofit)
+    implementation(libs.androidx.constraintlayout.compose)
+    implementation(libs.coil.compose) // Verifica la última versión de Coil
 
-    // Gson Converter para Retrofit
-    implementation (libs.retrofit2.converter.gson)
+    implementation ("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation("com.google.dagger:hilt-android:2.54")
+    implementation(libs.androidx.navigation.compose)
+    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
+
+
+    implementation (libs.androidx.lifecycle.viewmodel.compose)
+
+
+    implementation(libs.retrofit.v2110)
+    implementation(libs.retrofit2.converter.gson)
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
