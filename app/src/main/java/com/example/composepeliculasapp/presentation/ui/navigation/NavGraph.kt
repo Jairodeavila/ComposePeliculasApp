@@ -35,18 +35,15 @@ fun MyApp() {
 
 @Composable
 fun FavoritesScreen(navController: NavHostController) {
-    // Simple placeholder for now
     Text(text = "Favorites Screen - Under Construction")
 }
 
 @Composable
 fun ProfileScreen(navController: NavHostController) {
-    // Simple placeholder for now
     Text(text = "Profile Screen - Under Construction")
 }
 
 @Composable
 fun HomeScreen(navController: NavHostController) {
-    // Simple placeholder for now
     Text(text = "Home Screen - Under Construction")
 }
